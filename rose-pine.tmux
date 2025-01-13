@@ -390,13 +390,13 @@ main() {
     fi
 
     if [[ "$directory" == "on" ]]; then
-        right_column=$right_column$show_directory
+        right_column=$show_directory$right_column
     fi
 
     # The append and prepend sections are for inter-plugin compatibility
     # and extension
     if [[ "$disable_active_window_menu" == "on" ]]; then
-        left_column=$show_session
+        right_column=$right_column$show_session
     else
         left_column=$show_session$show_window
     fi
